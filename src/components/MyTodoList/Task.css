@@ -1,0 +1,48 @@
+.container {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    width: 400px;
+    background-color: yellow;
+    margin: 5px;
+}
+
+header
+{
+    background-color: orange;
+}
+
+.id {
+    width: 10%;
+    display: inline-flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    width: 90%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    display: inline-flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.status {
+    margin-top: 5px;
+    display: inline-flex;
+
+    height: 100%;
+    align-items: center;
+    font-weight: 900;
+}
+
+button {
+    font-weight: 900;
+}
