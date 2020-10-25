@@ -3,7 +3,9 @@ import './Task.css'
 class Task extends React.Component {
 
     printTaskInfo = () => {
-        console.log("Task " + this.props.id + " competed status = " + this.props.completed)
+        var id = this.props.id;
+        var status = !this.props.completed;
+        this.props.updateStatus(id, status);
     }
 
     render() {
