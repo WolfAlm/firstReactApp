@@ -1,32 +1,43 @@
-.container {
+$ColorContainer1: rgb(117, 0, 177);
+$ColorContainer2: hotpink;
+
+%flexible {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.container {
+    @extend %flexible;
+    flex-direction: column;
     position: relative;
     height: 100px;
     width: 400px;
     margin: 5px;
-    background-color: hotpink;
+    background-color: $ColorContainer2;
+
+    &:hover {
+        background-color: royalblue;
+    }
 }
 
 header
 {
-    background-color: rgb(117, 0, 117);
+    display: block;
+    width: 100%;
+    background-color: $ColorContainer1;
     color: white;
 }
 
 .id {
+    @extend %flexible;
     width: 10%;
-    display: inline-flex;
     float: left;
-    align-items: center;
-    justify-content: center;
 }
 
 .name {
     width: 90%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flexible;
 }
 
 .description {
