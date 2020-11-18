@@ -2,45 +2,49 @@ import React from 'react'
 
 class TaskAdd extends React.Component {
     state = {
-        count: 0
+        count: 0,
+        nameInput: "",
+        nameDescription: ""
     }
 
-    giveNumber = () => {
+    changeName = event => {
+        this.setState({nameInput: event.target.value})
+    }
+
+    changeDescription = event => {
+        this.setState({nameDescription: event.target.value})
+    }
+
+    createTask = () => {
         this.setState(currentState => ({
             count: currentState.count + 1
-        }))
+        }));
 
-        this.createTask();
-    }
-
-    createTask() {
-        var tasks = this.props.tasks;
-        var newTask = {
+        this.props.tasks({
             id: this.state.count + 1,
-            name: document.getElementById("nameInput").value,
-            description: document.getElementById("nameDescription").value,
+            name: this.state.nameInput,
+            description: this.state.nameDescription,
             completed: false
-        }
+        });
 
-        tasks.push(newTask);
-        this.props.updateData(tasks);
-        document.getElementById("nameInput").value = "";
-        document.getElementById("nameDescription").value = "";
+        this.setState({nameInput: "", nameDescription: ""});
     }
 
     render() {
         return (
             <div>
                 <div>Всего задач: {this.state.count}</div>
-                <label>
-                    Введите название задачи: <input type = "text" id="nameInput"/>
-                </label>
-                <br/>
-                <label>
-                    Введите описание задачи: <input type = "text" id="nameDescription"/>
-                </label>
-                <br/>
-                <input type="submit" value="Создать" onClick={this.giveNumber}/>
+                <form>
+                    <label>
+                        Введите название задачи: <input type = "text" id="nameInput" onChange={this.changeName}/>
+                    </label>
+                    <br/>
+                    <label>
+                        Введите описание задачи: <input type = "text" id="nameDescription" onChange={this.changeDescription}/>
+                    </label>
+                    <br/>
+                    <input type="reset" value="Создать" onClick={this.createTask}/>
+                </form>
             </div>
         )
     }
