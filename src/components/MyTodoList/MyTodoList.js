@@ -9,20 +9,22 @@ class MyTodoList extends React.Component {
         ]
     }
 
-    updateData = (value) => {
-        this.setState({tasks: value})
+    updateStatus = (index, status) => {
+        const newTasks = [...this.state.tasks];
+        var findIndex = newTasks.findIndex(currentValue => currentValue.id === index);
+        newTasks[findIndex] = {...newTasks[findIndex], completed: status};
+        this.setState({tasks: newTasks});
     }
 
-    updateStatus = (index, status) => {
-        var findIndex = this.state.tasks.findIndex(currentValue => currentValue.id == index);
-        this.state.tasks[findIndex].completed = status;
-        this.setState(this.state.tasks);
+    addTask = task => {
+        const newTasks = [...this.state.tasks, task];
+        this.setState({tasks: newTasks})
     }
 
     render() {
         return (
             <div className="tasks-container">
-                <TaskAdd tasks={this.state.tasks} updateData={this.updateData}/>
+                <TaskAdd tasks={this.addTask}/>
                 {
                     this.state.tasks.map((newTask, i) => 
                     <Task 
