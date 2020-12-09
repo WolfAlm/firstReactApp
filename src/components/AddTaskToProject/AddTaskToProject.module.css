@@ -1,0 +1,35 @@
+.addTaskToProject {
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 320px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.addTaskToProject input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1em;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.addTaskToProject .add_btn, 
+.addTaskToProject .reset_btn {
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 10px;
+}
+
+.addTaskToProject .add_btn:hover, 
+.addTaskToProject .reset_btn:hover {
+  cursor: pointer;
+} 
+
+.addTaskToProject .add_btn {
+  background-color: lightgreen;
+}
+.addTaskToProject .reset_btn {
+  background-color: tomato;
+}

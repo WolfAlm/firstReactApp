@@ -1,0 +1,13 @@
+.showhide_btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgreen;
+  font-size: 1em;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

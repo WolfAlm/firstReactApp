@@ -1,0 +1,27 @@
+.addProject {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 320px;
+}
+
+
+.form input {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.form .create_btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: lightgreen;
+}
+
+.form .create_btn:hover {
+  cursor: pointer;
+}

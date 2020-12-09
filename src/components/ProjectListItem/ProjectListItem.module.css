@@ -1,0 +1,21 @@
+.projectListItem {
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px 1px rgba(0,0,100,.1);
+}
+
+.remove_btn, .link {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000;
+}
+.remove_btn:hover, .link:hover {
+  cursor: pointer;
+}
