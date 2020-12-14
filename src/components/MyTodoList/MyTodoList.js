@@ -1,7 +1,6 @@
 import React from 'react'
 import Task from "../Task/Task";
 import TaskAdd from "../TaskAdd/TaskAdd";
-import './MyTodoList.css'
 
 class MyTodoList extends React.Component {
     state = { 
