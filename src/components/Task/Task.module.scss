@@ -1,0 +1,60 @@
+$ColorContainer1: rgb(117, 0, 177);
+$ColorContainer2: hotpink;
+
+%flexible {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    @extend %flexible;
+    flex-direction: column;
+    position: relative;
+    height: 100px;
+    width: 400px;
+    margin: 5px;
+    background-color: $ColorContainer2;
+
+    &:hover {
+        background-color: royalblue;
+    }
+}
+
+header
+{
+    display: block;
+    width: 100%;
+    background-color: $ColorContainer1;
+    color: white;
+}
+
+.id {
+    @extend %flexible;
+    width: 10%;
+    float: left;
+}
+
+.name {
+    width: 90%;
+    @extend %flexible;
+}
+
+.description {
+    display: inline-flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.status {
+    margin-top: 5px;
+    display: inline-flex;
+
+    height: 100%;
+    align-items: center;
+    font-weight: 900;
+}
+
+button {
+    font-weight: 900;
+}
