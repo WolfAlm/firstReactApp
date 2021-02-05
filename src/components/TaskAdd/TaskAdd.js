@@ -60,17 +60,10 @@ class TaskAdd extends React.Component {
   }
 }
 
-// вот тут передаем экшены (action creator) в пропсы компонента
-// через connect
-// эти функции сразу диспатчатся
 const mapDispatchToProps = (dispatch) => {
   return {
     addTask: (task) => dispatch(addTask(task)),
   };
 };
 
-// передаем экшены (action creator) в пропсы компонента
-// теперь внутри компонента можно обратиться к экшену как
-// this.props.addTask
 export default connect(null, mapDispatchToProps)(TaskAdd);
-

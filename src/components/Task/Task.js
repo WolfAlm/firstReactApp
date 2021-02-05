@@ -7,15 +7,6 @@ import classnames from "classnames/bind";
 const cs = classnames.bind(styles);
 
 class Task extends React.Component {
-  /*
-   * это уже не нужно, можно удалить
-  printTaskInfo = () => {
-    var id = this.props.id;
-    var status = !this.props.completed;
-    this.props.updateStatus(id, status);
-  };
-  */
-
   render() {
     return (
       <div className={cs("container", { ["container:hover"]: true })}>
@@ -40,17 +31,10 @@ class Task extends React.Component {
   }
 }
 
-// вот тут передаем экшены (action creator) в пропсы компонента
-// через connect
-// эти функции сразу диспатчатся
 const mapDispatchToProps = (dispatch) => {
   return {
     updateStatus: (id) => dispatch(updateStatus(id)),
   };
 };
 
-// передаем экшены (action creator) в пропсы компонента
-// теперь внутри компонента можно обратиться к экшену как
-// this.props.updateStatus
 export default connect(null, mapDispatchToProps)(Task);
-

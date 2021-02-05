@@ -1,3 +1,6 @@
-// action types
-export const ADD_TASK = "ADD_TASK";
-export const UPDATE_STATUS = "UPDATE_STATUS";
+// project action types
+export const ADD_PROJECT = "ADD_PROJECT";
+export const REMOVE_PROJECT = "REMOVE_PROJECT";
+export const ADD_TASK_TO_PROJECT = "ADD_TASK_TO_PROJECT";
+export const REMOVE_TASK_FROM_PROJECT = "REMOVE_TASK_FROM_PROJECT";
+export const CHANGE_TASK_STATUS = "CHANGE_TASK_STATUS";

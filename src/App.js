@@ -1,11 +1,16 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
-import MyTodoList from "./components/MyTodoList/MyTodoList";
+import ProjectList from "./components/ProjectList/ProjectList";
+import Project from "./components/Project/Project";
 
 function App() {
   return (
     <div className="App">
-      <MyTodoList />
+      <Switch>
+        <Route path="/" exact component={ProjectList} />
+        <Route path="/projects/:id" component={Project} />
+      </Switch>
     </div>
   );
 }
